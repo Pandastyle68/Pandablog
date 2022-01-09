@@ -1,0 +1,479 @@
+.registration-form {
+  padding: 50px 0;
+}
+
+.registration-form form {
+  background-color: #292b2e;
+  border: 2px solid #3F3AE4;
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.container-form-newpost form {
+  background-color: #292b2e;
+  border: 2px solid #3F3AE4;
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.container-form-newpost .form-control{
+  background-color: #292b2e;
+  border: 2px solid #3F3AE4;
+  color:white
+}
+
+.registration-form .form-icon {
+  text-align: center;
+  background-color: #3F3AE4;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 50px;
+  line-height: 100px;
+}
+
+.registration-form .item {
+  background-color: #292b2e;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+}
+
+
+
+.registration-form .create-account {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #292b2e;
+  border: none;
+  border: 2px solid #3F3AE4;
+  color: white;
+  margin-top: 20px;
+}
+
+.registration-form .create-account:hover{
+  border: 4px solid #ffffff;
+}
+
+
+@media (max-width: 1080px) {
+  .registration-form form {
+    padding: 50px 20px;
+  }
+  .registration-form .form-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 70px;
+  }
+  .login {
+    background-color: #292b2e;
+    border: 2px solid #3F3AE4;
+    width: 65%;
+    max-width: 80%;
+    height: 27em;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    text-align: center;
+    color: white;
+    border-radius: 24px;
+  }
+  .login h1 {
+    color: #ffffff;
+  }
+  .login-forgot {
+    text-decoration: underline white
+  }
+  .login-usrinput, .login-pswinput, .login-emailinput {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    border: 2px solid #3F3AE4;
+    padding: 10px 10px;
+    width: 75%;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+  }
+  .login-form-submit {
+    width: 20%;
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    margin: auto auto;
+    border: 2px solid #3F3AE4;
+    padding: 5% 20%;
+    color: white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+  }
+}
+
+body {
+  background-image: linear-gradient(to right, #292b2e, rgba(0, 0, 0, 1));
+}
+
+.image-blur {
+  filter: blur(4px);
+  -webkit-filter: blur(6px);
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+
+.navbar {
+  transition: all 0.4s;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+  color: #3F3AE4;
+}
+
+
+.navbar .navbar-brand {
+  color: #3F3AE4;
+}
+
+/* Change navbar styling on scroll */
+
+.navbar.active {
+  background: #292b2e;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+  color: #3F3AE4;
+}
+
+.navbar.active .nav-link:hover, .navbar.active .nav-link:focus, .navbar.active .navbar-brand:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #3F3AE4;
+}
+
+/* Change navbar styling on small viewports */
+
+@media (max-width: 991.98px) {
+  .navbar {
+    background: #292b2e;
+  }
+  .navbar .navbar-brand, .navbar .nav-link {
+    color: #3F3AE4;
+  }
+  html, body {
+    height: 100%;
+  }
+  #page-content {
+    flex: 1 0 auto;
+  }
+}
+
+@media (min-width: 1080px) {
+  .login {
+    background-color: #292b2e;
+    border: 2px solid #3F3AE4;
+    width: 40%;
+    max-width: 80%;
+    height: 27em;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    text-align: center;
+    color: white;
+    border-radius: 24px;
+  }
+  .login-usrinput, .login-pswinput, .login-emailinput {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    border: 2px solid #3F3AE4;
+    padding: 10px 10px;
+    width: 75%;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+  }
+
+  .login-form-submit {
+    width: 20%;
+    border: 0;
+    background: none;
+    display: block;
+    margin: auto auto;
+    text-align: center;
+    border: 2px solid #3F3AE4;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    text-justify: auto;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+  }
+}
+
+.login h1 {
+  color: #ffffff;
+}
+
+.login-forgot {
+  text-decoration: underline white
+}
+
+.login-usrinput:hover, .login-pswinput:hover {
+  border: 2px solid #ffffff;
+  width: 77%;
+}
+
+.login-usrinput:focus, .login-pswinput:focus {
+  border: 2px solid #bb2218;
+  width: 77%;
+}
+
+.login-forgot:hover {
+  color: #ffffff;
+}
+
+
+
+.login-form-submit:hover {
+  border: 2px solid #ffffff;
+}
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 1%;
+  padding: 0
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 1%
+}
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998
+}
+
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff
+}
+
+.social-network a.icoGoogle:hover {
+  background-color: #BD3518
+}
+
+.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i, .social-network a.icoGoogle:hover i {
+  color: #fff
+}
+
+a.socialIcon:hover, .socialHoverClass {
+  color: #44BCDD
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center
+}
+
+.social-circle li a:hover i, .triggeredHover {
+  transform: rotate(360deg);
+  transition: all 0.2s
+}
+
+.social-circle i {
+  color: #fff;
+  transition: all 0.8s;
+  transition: all 0.8s
+}
+
+.footerclass {
+  margin-top: 20em;
+}
+
+
+.file-upload {
+  background-color: #292b2e;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  width: 50%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #1FB264;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1FB264;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824B;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 80%;
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.btn-pandabooru{
+  border: 2px solid #fff;
+  background-color: #292b2e;
+  width: 40%;
+  border-radius: 24px;
+}
+
+.btn-pandabooru:hover{
+  border: 2px solid #ffffff;
+  background-color: #292b2e;
+  width: 42%;
+}
+
+.container-form-modtags{
+  background-color: #292b2e;
+  border: 2px solid #3F3AE4;
+  max-width: 600px;
+  margin: 15% auto auto auto;
+  margin-top: 5%;
+  padding: 50px 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
