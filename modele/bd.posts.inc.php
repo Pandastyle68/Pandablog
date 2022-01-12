@@ -21,7 +21,7 @@ function getNbPosts()
 
 function getNbPostsWTags($tags)
 {
-    $resultat = 0;
+    $resultat = array();
     try {
         $cnx = connexionPDO();
         if ((count(explode(",", $tags)) > 1)) {
@@ -38,23 +38,30 @@ function getNbPostsWTags($tags)
                 }
             }
             $req = $cnx->prepare($req);
+            $req->execute();
+
+            $ligne = $req->fetch(PDO::FETCH_ASSOC);
+            while ($ligne) {
+                $resultat[] = $ligne;
+                $ligne = $req->fetch(PDO::FETCH_ASSOC);
+            }
+            return $resultat;
         } else {
             $req = $cnx->prepare("SELECT COUNT(posts.id) AS nbPosts FROM posts JOIN postags ON posts.id = postags.idPost JOIN tags ON postags.idTags = tags.id WHERE UPPER(tags.label) LIKE UPPER(:tags)");
             $req->bindValue(':tags', $tags, PDO::PARAM_STR);
+            $req->execute();
+
+            $ligne = $req->fetch(PDO::FETCH_ASSOC);
+
+            if (!is_bool($ligne)) {
+                return $ligne['nbPosts'];
+            } else {
+                return 0;
+            }
         }
-
-
-        $req->execute();
-
-        $ligne = $req->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage();
         die();
-    }
-    if(!is_bool($ligne)){
-        return $ligne['nbPosts'];
-    }else{
-        return 0;
     }
 }
 

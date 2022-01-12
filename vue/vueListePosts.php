@@ -90,11 +90,11 @@
         <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
           <a href="./?page=posts&tags=<?= $_GET['tags'] ?>&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn">Précédente</a>
         </li>
-        <?php if($currentPage > 1) : ?>
+        <?php if ($currentPage > 1) : ?>
           <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-          <a href="./?page=posts&tags=<?= $_GET['tags'] ?>&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn"><?=$currentPage - 1?></a>
-        </li>
-        <?php endif?>
+            <a href="./?page=posts&tags=<?= $_GET['tags'] ?>&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn"><?= $currentPage - 1 ?></a>
+          </li>
+        <?php endif ?>
         <?php for ($page = $currentPage; $page <= $currentPage + 3; $page++) : ?>
           <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
           <?php if (!($page  > $pages)) : ?>
@@ -111,11 +111,11 @@
         <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
           <a href="./?page=posts&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn">Précédente</a>
         </li>
-        <?php if($currentPage > 1) : ?>
+        <?php if ($currentPage > 1) : ?>
           <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-          <a href="./?page=posts&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn"><?=$currentPage - 1?></a>
-        </li>
-        <?php endif?>
+            <a href="./?page=posts&num=<?= $currentPage - 1 ?>" class="btn-sm page-link tag-sub-btn"><?= $currentPage - 1 ?></a>
+          </li>
+        <?php endif ?>
         <?php for ($page = $currentPage; $page <= $currentPage + 3; $page++) : ?>
           <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
           <?php if (!($page  > $pages)) : ?>
