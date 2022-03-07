@@ -11,12 +11,18 @@ include_once "$racine/modele/bd.posts.inc.php";
 include_once "$racine/modele/bd.coms.inc.php";
 include_once "$racine/modele/bd.utilisateur.inc.php";
 
+require_once "$racine/lib/Mobile_Detect.php";
+$detect = new Mobile_Detect();
 if(isset($_GET['id'])){
     $lePost = getPostById($_GET['id']);
     $pAuthor = getPostAuthor($lePost['idUser']);
     $lesComs = getComsByPostId($_GET['id']);
     $lesTags = getPostTags($_GET['id']);
-    $titre = $lePost['label'];
+    $titre = "";
+    foreach($lesTags as $unTag){
+        $tagNom = $unTag['label'];
+        $titre ="$titre $tagNom";
+    }
     include "$racine/vue/entete.html.php";
     if(isset($_SESSION['mailU'])){
         if(isset($_POST['submit'])){

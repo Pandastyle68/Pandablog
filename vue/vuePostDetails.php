@@ -100,10 +100,18 @@
         foreach ($lesTags as $unTag) : $countTag++;
             $unLabelTag = str_replace("( ", "(", ucwords(str_replace("(", "( ", str_replace("_", " ", $unTag['label'])))); ?>
             <a href="./?tags=<?= $unTag['label'] ?>" type="button" class="btn btn-secondary btn-sm tag-but nowrap"><?= $unLabelTag ?></button></a>
-            <?php if ($countTag % 4 == 0) : ?>
+            <?php if ($detect->isMobile()) :
+                if ($countTag % 2 == 0) : ?>
     </div>
     <div class="d-flex justify-content-center text-white tag-container">
-    <?php endif ?>
+    <?php
+                endif;
+            else :
+                if ($countTag % 4 == 0) : ?>
+    </div>
+    <div class="d-flex justify-content-center text-white tag-container">
+<?php endif;
+            endif; ?>
 <?php endforeach ?>
     </div>
     <hr>

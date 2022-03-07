@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php if (!isset($_COOKIE['acceptNsfw'])) : setcookie("acceptNsfw", 0);
 header("Refresh:0");
-endif ?>
+endif;
+?>
 <html lang="fr">
 
 <head>

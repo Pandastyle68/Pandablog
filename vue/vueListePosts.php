@@ -30,8 +30,8 @@
     <?php } ?>
     <div class="card bg-dark h-25" style="width: 620px;">
       <?php if (!(isset($_COOKIE["acceptNsfw"]))) { ?>
-        <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { ?>
-          <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $leContent ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
+        <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { $postr = explode("/", $leContent) ?>
+          <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $postr[0] . '/thumbnail_' . $postr[1] ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%" onerror="this.onerror=null;this.src='<?= $leContent ?>'"></a>
         <?php } else if (strpos($leContent, ".mp3")) {
             $postr = explode("/", $leContent) ?>
           <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>">🔞♬<?= $listePosts[$i]['label'] ?>♬🔞
@@ -39,15 +39,17 @@
           </a>
         <?php } else {
             $postr = explode("/", $leContent) ?>
-          <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $postr[0] . '/thumbnail_' . $postr[1] . '.jpg' ?>" type="image/png" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
+          <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $postr[0] . '/thumbnail_' . $postr[1] . '.jpg' ?>" type="image/png" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%" onerror="this.onerror=null;this.src='<?= $leContent ?>'"></a>
         <?php } ?>
 
     </div>
     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
   <?php } else { ?>
     <?php if (($listePosts[$i]['nsfw'] == 0) | (($_COOKIE["acceptNsfw"] == 1) & $listePosts[$i]['nsfw'] >= 1)) { ?>
-      <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { ?>
-        <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded" src="<?= $leContent ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
+      <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { 
+        $postr = explode("/", $leContent) ?>
+        <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded" src="<?= $postr[0] . '/thumbnail_' . $postr[1] ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%" onerror="this.onerror=null;this.src='<?= $leContent ?>'"
+></a>
       <?php } else if (strpos($leContent, ".mp3")) {
               $postr = explode("/", $leContent) ?>
         <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>">♬<?= $listePosts[$i]['label'] ?>♬
@@ -55,13 +57,13 @@
         </a>
       <?php } else {
               $postr = explode("/", $leContent) ?>
-        <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded" src="<?= $postr[0] . '/thumbnail_' . $postr[1] . '.jpg' ?>" type="image/png" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
+        <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded" src="<?= $postr[0] . '/thumbnail_' . $postr[1] . '.jpg' ?>" type="image/png" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%" onerror="this.onerror=null;this.src='<?= $leContent ?>'"></a>
       <?php } ?>
     </div>
     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
   <?php } else if (($listePosts[$i]['nsfw'] >= 1) & ($_COOKIE["acceptNsfw"] == 0)) { ?>
-    <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { ?>
-      <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $leContent ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
+    <?php if (strpos($leContent, ".png") | strpos($leContent, ".jpg") | strpos($leContent, ".jpeg")) { $postr = explode("/", $leContent) ?>
+      <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>" type="image/jpeg"><img class="card-img-top img-fluid hover-overlay ripple shadow-1-strong rounded image-blur" src="<?= $postr[0] . '/thumbnail_' . $postr[1] ?>" type="image/jpeg" class="img-fluid img-thumbnail" alt="Image Post" width="50%" height="50%"></a>
     <?php } else if (strpos($leContent, ".mp3")) {
               $postr = explode("/", $leContent) ?>
       <a href="./?page=post&id=<?= $listePosts[$i]["id"] ?>">🔞♬<?= $listePosts[$i]['label'] ?>♬🔞

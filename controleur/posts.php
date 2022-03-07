@@ -56,7 +56,15 @@ if (isset($_GET["tags"])) {
 ;
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
-$titre = "Pandabooru";
+if(isset($_GET['tags'])){
+    $titre = $_GET['tags'];
+}else{
+    $titre = "Pandabooru";
+}
+if(isset($_GET['num'])){
+    $nbPage = $_GET['num'];
+    $titre = "$titre | Page : $nbPage";
+}
 include "$racine/vue/entete.html.php";
 include "$racine/vue/vueVideo.php";
 include "$racine/vue/vueListePosts.php";
